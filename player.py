@@ -3,8 +3,8 @@ from blocks import GameObject
 from pyganim import PygAnimation
 import pygame
 
-XMOVE_SPEED = 5
-YMOVE_SPEED = 5
+XMOVE_SPEED = 10
+YMOVE_SPEED = 10
 WIDTH = 42
 HEIGHT = 42
 COLOR = "#888888"

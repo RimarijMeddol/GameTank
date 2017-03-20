@@ -124,8 +124,10 @@ def main():
         myfont = pygame.font.SysFont("monospace", 30, bold=True)
         fpsData = str("FPS: ") + str(int(timer.get_fps()))
         Score = str("Score: ") + hero.func()
+        timeFromStart =str("Time: ") + str(pygame.time.get_ticks()//1000)
         label = myfont.render((fpsData), 1, (255,0,0))
         label2 = myfont.render((Score), 1, (255,0,0))
+        label3 = myfont.render((timeFromStart),1,(255,0,0))
         # k = Key(x_key, y_key)
         # entities.add(k)
         # interactive.append(k)
@@ -139,6 +141,7 @@ def main():
         screen.blit(hero.image, camera.apply(hero))
         screen.blit(label, (0, 0))
         screen.blit(label2, (0, 40))
+        screen.blit(label3, (0,80))
         pygame.display.update()
         print(hero.func())
 
