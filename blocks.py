@@ -1,8 +1,8 @@
 from pygame import sprite, Surface, Color, Rect, image
 from main import *
 
-PLATFORM_WIDTH = 50
-PLATFORM_HEIGHT = 50
+PLATFORM_WIDTH = 75
+PLATFORM_HEIGHT = 75
 PLATFORM_COLOR = "#FF6262"
 object_images = {
         "a": "block/AngleUR1.png",

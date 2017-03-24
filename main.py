@@ -2,10 +2,11 @@ import pygame
 from player import *
 from blocks import *
 from pyganim import *
+from random import randint
 
 
-WIN_WIDTH = 800  #
-WIN_HEIGHT = 640  #
+WIN_WIDTH = 1000  #
+WIN_HEIGHT = 800  #
 BACKGROUND_COLOR = "#004400"
 
 
@@ -43,7 +44,8 @@ def main():
     bg.fill(Color(BACKGROUND_COLOR))
 
     entities = pygame.sprite.Group()  #
-    with open('level.txt', 'r') as level_map:
+    level = 'level' + str(randint(0,1)) + '.txt'
+    with open(level, 'r') as level_map:
         lines = level_map.readlines()
         level = [string[:-2] for string in lines[1:-3]]
     all_blocks = []
@@ -75,7 +77,7 @@ def main():
     total_level_height = len(level) * PLATFORM_HEIGHT  #
 
     playerX = 80
-    playerY = 60
+    playerY = 80
     hero = Player(playerX, playerY, all_blocks)
     print('Is Player: ', isinstance(hero, Player))
     print('Is String: ', isinstance(hero, str))
